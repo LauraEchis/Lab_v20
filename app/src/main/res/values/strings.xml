@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Pizza_v20</string>
+    <string name="todo">TODO</string>
+    <string name="rbSize1">25 см</string>
+    <string name="rbSize2">30 см</string>
+    <string name="rbSize3">35 см</string>
+    <string name="name"></string>
+    <string name="phone"></string>
+    <string name="chb_adds_1">Ветчина</string>
+    <string name="chb_adds_2">Грибы</string>
+    <string name="chb_adds_3">Перец</string>
+    <string name="chb_adds_4">Курица</string>
+    <string name="chb_adds_5">Ананасы</string>
+    <string name="chb_adds_6">Сыр</string>
+    <string name="switch_email">Отправить копию на электронную почту</string>
+    <string name="email"></string>
+    <string name="input_name">Введите имя</string>
+    <string name="input_phone">Введите телефон</string>
+    <string name="date_card">Дата окончания действия карты</string>
+    <string name="e_mail">E-mail</string>
+    <string name="cvv_cvc2">CVV/CVC2</string>
+    <string name="card_number">Номер карты</string>
+    <string name="txtResult">TextView</string>
+    <string name="email_switch">Отправить на электронную почту</string>
+
+    <string-array name="pay">
+        <item>Банковская карта</item>
+        <item>Наличная оплата</item>
+        <item>Яндекс.Деньги</item>
+        <item>PayPal</item>
+        <item>Бонусная карта</item>
+    </string-array>
+</resources>
