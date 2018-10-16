@@ -69,43 +69,49 @@
                 android:id="@+id/checkBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/chb_adds_1" />
+                android:text="@string/chb_adds_1"
+                android:onClick="check_box1_onClick"/>
 
             <CheckBox
                 android:id="@+id/checkBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/chb_adds_2" />
+                android:text="@string/chb_adds_2"
+                android:onClick="check_box2_onClick"/>
 
             <CheckBox
                 android:id="@+id/checkBox3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/chb_adds_3" />
+                android:text="@string/chb_adds_3"
+                android:onClick="check_box3_onClick"/>
 
             <CheckBox
                 android:id="@+id/checkBox4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/chb_adds_4" />
+                android:text="@string/chb_adds_4"
+                android:onClick="check_box4_onClick"/>
 
             <CheckBox
                 android:id="@+id/checkBox5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/chb_adds_5" />
+                android:text="@string/chb_adds_5"
+                android:onClick="check_box5_onClick"/>
 
             <CheckBox
                 android:id="@+id/checkBox6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/chb_adds_6" />
+                android:text="@string/chb_adds_6"
+                android:onClick="check_box6_onClick"/>
 
             <Spinner
                 android:id="@+id/spinner_pay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/pay" />
+                android:entries="@array/pay"/>
 
             <EditText
                 android:id="@+id/cardNumber"
@@ -114,16 +120,18 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/card_number"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
 
             <EditText
                 android:id="@+id/dateCardEnd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/date_card"
-                android:inputType="phone"
-                android:autofillHints="" />
+                android:inputType="date"
+                android:visibility="invisible" />
 
             <EditText
                 android:id="@+id/cardCVV"
@@ -132,13 +140,19 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/cvv_cvc2"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:visibility="invisible" />
 
             <Switch
                 android:id="@+id/email_switch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/email_switch" />
+                android:text="@string/email_switch"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:onClick='switch_email_onClick'
+                android:visibility="visible" />
 
             <EditText
                 android:id="@+id/email"
@@ -147,13 +161,18 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/e_mail"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/txtResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/txtResult" />
+                android:text="@string/txtResult"
+                android:textAlignment="textEnd"
+                android:textAllCaps="true"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
 
         </LinearLayout>
     </ScrollView>
