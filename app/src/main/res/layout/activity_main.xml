@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/date_card"
-                android:inputType="date"
+                android:inputType="phone"
                 android:autofillHints="" />
 
             <EditText
@@ -134,6 +134,12 @@
                 android:hint="@string/cvv_cvc2"
                 android:inputType="numberDecimal" />
 
+            <Switch
+                android:id="@+id/email_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email_switch" />
+
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
@@ -142,12 +148,6 @@
                 android:ems="10"
                 android:hint="@string/e_mail"
                 android:inputType="textEmailAddress" />
-
-            <Switch
-                android:id="@+id/email_switch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/email_switch" />
 
             <TextView
                 android:id="@+id/txtResult"
