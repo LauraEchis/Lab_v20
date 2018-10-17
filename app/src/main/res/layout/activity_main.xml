@@ -14,7 +14,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="visible">
 
             <EditText
                 android:id="@+id/input_name"
@@ -24,7 +25,8 @@
                 android:ems="10"
                 android:hint="@string/input_name"
                 android:inputType="textPersonName"
-                android:text="@string/name" />
+                android:text="@string/name"
+                android:visibility="visible" />
 
             <EditText
                 android:id="@+id/input_phone"
@@ -48,6 +50,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="rb1_onClick"
                     android:text="@string/rbSize1" />
 
                 <RadioButton
@@ -55,6 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="rb2_onClick"
                     android:text="@string/rbSize2" />
 
                 <RadioButton
@@ -62,6 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="rb3_onClick"
                     android:text="@string/rbSize3" />
             </RadioGroup>
 
@@ -69,49 +74,49 @@
                 android:id="@+id/checkBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/chb_adds_1"
-                android:onClick="check_box1_onClick"/>
+                android:onClick="check_box1_onClick"
+                android:text="@string/chb_adds_1" />
 
             <CheckBox
                 android:id="@+id/checkBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/chb_adds_2"
-                android:onClick="check_box2_onClick"/>
+                android:onClick="check_box2_onClick"
+                android:text="@string/chb_adds_2" />
 
             <CheckBox
                 android:id="@+id/checkBox3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/chb_adds_3"
-                android:onClick="check_box3_onClick"/>
+                android:onClick="check_box3_onClick"
+                android:text="@string/chb_adds_3" />
 
             <CheckBox
                 android:id="@+id/checkBox4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/chb_adds_4"
-                android:onClick="check_box4_onClick"/>
+                android:onClick="check_box4_onClick"
+                android:text="@string/chb_adds_4" />
 
             <CheckBox
                 android:id="@+id/checkBox5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/chb_adds_5"
-                android:onClick="check_box5_onClick"/>
+                android:onClick="check_box5_onClick"
+                android:text="@string/chb_adds_5" />
 
             <CheckBox
                 android:id="@+id/checkBox6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/chb_adds_6"
-                android:onClick="check_box6_onClick"/>
+                android:onClick="check_box6_onClick"
+                android:text="@string/chb_adds_6" />
 
             <Spinner
                 android:id="@+id/spinner_pay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/pay"/>
+                android:entries="@array/pay" />
 
             <EditText
                 android:id="@+id/cardNumber"
@@ -121,7 +126,7 @@
                 android:ems="10"
                 android:hint="@string/card_number"
                 android:inputType="numberDecimal"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/dateCardEnd"
@@ -131,7 +136,7 @@
                 android:ems="10"
                 android:hint="@string/date_card"
                 android:inputType="date"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/cardCVV"
@@ -141,17 +146,17 @@
                 android:ems="10"
                 android:hint="@string/cvv_cvc2"
                 android:inputType="numberDecimal"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <Switch
                 android:id="@+id/email_switch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick='switch_email_onClick'
                 android:text="@string/email_switch"
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textSize="18sp"
-                android:onClick='switch_email_onClick'
                 android:visibility="visible" />
 
             <EditText
@@ -162,19 +167,27 @@
                 android:ems="10"
                 android:hint="@string/e_mail"
                 android:inputType="textEmailAddress"
-                android:visibility="invisible" />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/txtResult"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="@string/txtResult"
                 android:textAlignment="textEnd"
                 android:textAllCaps="true"
                 android:textSize="30sp"
-                android:textStyle="bold|italic" />
+                android:textStyle="bold|italic"
+                android:visibility="visible" />
 
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/button"
+                android:onClick="button_order_onClick"/>
         </LinearLayout>
     </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>

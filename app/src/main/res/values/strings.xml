@@ -22,10 +22,11 @@
     <string name="card_number">Номер карты</string>
     <string name="txtResult">TextView</string>
     <string name="email_switch">Отправить на электронную почту</string>
+    <string name="button">Оформить заказ</string>
 
     <string-array name="pay">
         <item>Банковская карта</item>
-        <item>Наличная оплата</item>
+        <item>Оплата наличными</item>
         <item>Яндекс.Деньги</item>
         <item>PayPal</item>
         <item>Бонусная карта</item>
