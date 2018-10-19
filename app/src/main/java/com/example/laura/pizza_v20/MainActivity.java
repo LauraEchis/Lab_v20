@@ -1,10 +1,7 @@
 package com.example.laura.pizza_v20;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -15,8 +12,8 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static com.example.laura.pizza_v20.R.*;
-import static com.example.laura.pizza_v20.R.string.*;
+import static com.example.laura.pizza_v20.R.id;
+import static com.example.laura.pizza_v20.R.layout;
 
 public class MainActivity extends AppCompatActivity {
     TextView cardNumber;
@@ -85,32 +82,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*public void radio_buttons_onClick(RadioButton radioButton, int amount, int rad25, int rad30, int rad35, TextView textView) {
-        rb = findViewById(R.id.radioButton);
-        int all_score = Integer.parseInt((textView.getText().toString()));
-        if (rb.isChecked()) {
-            all_score = all_score + amount - (rad25*rad25first + rad30*rad30first + rad35*rad35first);
-            textView.setText(Integer.toString(all_score));
-        }
-    }*/
-
-//    public void reset_amount() {
-//        if (rad25first == 0) {
-//            rad25 = 0;
-//        } else {
-//            rad25 = 200;
-//        }
-//        if (rad30first == 0) {
-//            rad30 = 0;
-//        } else {
-//            rad30 = 250;
-//        }
-//        if (rad35first == 0) {
-//            rad35 = 0;
-//        } else {
-//            rad35 = 300;
-//        }
-//    }
 
     public void rb1_onClick(View view) {
         rb2.setEnabled(true);
