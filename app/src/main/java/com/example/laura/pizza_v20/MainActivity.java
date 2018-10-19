@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         all_score = all_score + rad25 - previous_cost;
         previous_cost = rad25;
         full_amount.setText(Integer.toString(all_score));
-        rb.setEnabled(false);
+        rb.setClickable(false);
     }
 
     public void checkboxes_onClick(CheckBox checkBox, int amount, TextView textView) {
@@ -84,9 +84,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void rb1_onClick(View view) {
-        rb2.setEnabled(true);
-        rb3.setEnabled(true);
-        rb.setEnabled(false);
+        rb2.setClickable(true);
+        rb3.setClickable(true);
+        rb.setClickable(false);
         full_amount = findViewById(id.txtResult);
         int all_score = Integer.parseInt((full_amount.getText().toString()));
         all_score = all_score + rad25 - previous_cost;
@@ -95,9 +95,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void rb2_onClick(View view) {
-        rb2.setEnabled(false);
-        rb3.setEnabled(true);
-        rb.setEnabled(true);
+        rb2.setClickable(false);
+        rb3.setClickable(true);
+        rb.setClickable(true);
         full_amount = findViewById(id.txtResult);
         int all_score = Integer.parseInt((full_amount.getText().toString()));
         all_score = all_score + rad30 - previous_cost;
@@ -106,9 +106,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void rb3_onClick(View view) {
-        rb2.setEnabled(true);
-        rb3.setEnabled(false);
-        rb.setEnabled(true);
+        rb2.setClickable(true);
+        rb3.setClickable(false);
+        rb.setClickable(true);
         full_amount = findViewById(id.txtResult);
         int all_score = Integer.parseInt((full_amount.getText().toString()));
         all_score = all_score + rad35 - previous_cost;
