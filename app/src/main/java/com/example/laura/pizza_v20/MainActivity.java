@@ -1,5 +1,7 @@
 package com.example.laura.pizza_v20;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,9 +40,7 @@ public class MainActivity extends AppCompatActivity {
     int rad25 = 200;
     int rad30 = 0;
     int rad35 = 0;
-    int rad25first = 0;
-    int rad30first = 0;
-    int rad35first = 0;
+    int previous_cost = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,14 +58,15 @@ public class MainActivity extends AppCompatActivity {
         cardNumber.setVisibility(View.VISIBLE);
         cardCCV.setVisibility(View.VISIBLE);
         rb = findViewById(R.id.radioButton);
+        rb2 = findViewById(R.id.radioButton2);
+        rb3 = findViewById(R.id.radioButton3);
         rb.setChecked(true);
-        rad25first = 1;
         full_amount = findViewById(R.id.txtResult);
         int all_score = Integer.parseInt((full_amount.getText().toString()));
-        all_score = all_score + rad25;
+        all_score = all_score + rad25 - previous_cost;
+        previous_cost = rad25;
         full_amount.setText(Integer.toString(all_score));
-
-
+        rb.setEnabled(false);
     }
 
     public void checkboxes_onClick(CheckBox checkBox, int amount, TextView textView) {
@@ -89,33 +90,55 @@ public class MainActivity extends AppCompatActivity {
         }
     }*/
 
-    public void reset_amount() {
-        if (rad25first == 0) {
-            rad25 = 0;
-        } else {
-            rad25 = 200;
-        }
-        if (rad30first == 0) {
-            rad30 = 0;
-        } else {
-            rad30 = 250;
-        }
-        if (rad35first == 0) {
-            rad35 = 0;
-        } else {
-            rad35 = 300;
-        }
-    }
+//    public void reset_amount() {
+//        if (rad25first == 0) {
+//            rad25 = 0;
+//        } else {
+//            rad25 = 200;
+//        }
+//        if (rad30first == 0) {
+//            rad30 = 0;
+//        } else {
+//            rad30 = 250;
+//        }
+//        if (rad35first == 0) {
+//            rad35 = 0;
+//        } else {
+//            rad35 = 300;
+//        }
+//    }
 
     public void rb1_onClick(View view) {
-
+        rb2.setEnabled(true);
+        rb3.setEnabled(true);
+        rb.setEnabled(false);
+        full_amount = findViewById(R.id.txtResult);
+        int all_score = Integer.parseInt((full_amount.getText().toString()));
+        all_score = all_score + rad25 - previous_cost;
+        previous_cost = rad25;
+        full_amount.setText(Integer.toString(all_score));
     }
 
     public void rb2_onClick(View view) {
+        rb2.setEnabled(false);
+        rb3.setEnabled(true);
+        rb.setEnabled(true);
+        full_amount = findViewById(R.id.txtResult);
+        int all_score = Integer.parseInt((full_amount.getText().toString()));
+        all_score = all_score + rad30 - previous_cost;
+        previous_cost = rad30;
+        full_amount.setText(Integer.toString(all_score));
     }
 
     public void rb3_onClick(View view) {
-
+        rb2.setEnabled(true);
+        rb3.setEnabled(false);
+        rb.setEnabled(true);
+        full_amount = findViewById(R.id.txtResult);
+        int all_score = Integer.parseInt((full_amount.getText().toString()));
+        all_score = all_score + rad35 - previous_cost;
+        previous_cost = rad35;
+        full_amount.setText(Integer.toString(all_score));
     }
 
 
