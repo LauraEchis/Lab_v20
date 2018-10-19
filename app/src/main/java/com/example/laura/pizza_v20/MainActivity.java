@@ -197,22 +197,22 @@ public class MainActivity extends AppCompatActivity {
         payment_kind = spinner.getSelectedItem().toString();
 
         if (checkBox1.isChecked()) {
-            adds += "Ветчина";
+            adds += "Ветчина; ";
         }
         if (checkBox2.isChecked()) {
-            adds += "Грибы";
+            adds += "Грибы; ";
         }
         if (checkBox3.isChecked()) {
-            adds += "Перец";
+            adds += "Перец; ";
         }
         if (checkBox4.isChecked()) {
-            adds += String.format("%d ", chb_adds_4);
+            adds += "Курица; ";
         }
         if (checkBox5.isChecked()) {
-            adds += String.format("%d ", chb_adds_5);
+            adds += "Ананасы; ";
         }
         if (checkBox6.isChecked()) {
-            adds += String.format("%d ", chb_adds_6);
+            adds += "Двойной сыр; ";
         }
 
         payment = full_amount.getText().toString();
