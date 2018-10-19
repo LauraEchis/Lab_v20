@@ -23,6 +23,7 @@
     <string name="txtResult">TextView</string>
     <string name="email_switch">Отправить на электронную почту</string>
     <string name="button">Оформить заказ</string>
+    <string name="pic_content_desc">pizza pic</string>
 
     <string-array name="pay">
         <item>Банковская карта</item>
